@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <meta charset="utf-8">
+    <title>Survey</title>
+    <!--bower components -->
+    <script src="angular/angular.js" charset="utf-8"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <!--app-->
+    <script src="angular/app.js" charset="utf-8"></script>
+    <!--factories-->
+    <script src='angular/factories/usersFactory.js'></script>
+    <script src='angular/factories/pollsFactory.js'></script>
+    <script src='angular/factories/votesFactory.js'></script>
+    <!--controllers-->
+    <script src='angular/controllers/loginController.js'></script>
+    <script src='angular/controllers/dashboardController.js'></script>
+    <script src='angular/controllers/pollController.js'></script>
+    <script src='angular/controllers/newController.js'></script>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="angular/style.css">
+</head>
+<body>
+    <div class='wrapper' ng-view></div>
+</body>
+</html>

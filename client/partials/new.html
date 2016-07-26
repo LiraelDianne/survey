@@ -1,0 +1,17 @@
+<div class="nav">
+    <a href="#/dashboard" ng-click='cancel()'>Cancel</a>
+</div>
+<h3>Put the question and options here:</h3>
+<form ng-submit='create()'>
+    <p ng-show='error.question'>Question must be at least 10 characters long.</p>
+    <label for='question'>Question</label><input type="text" id='question' ng-model='newPoll.question'>
+    <p ng-show='error.option1'>Options must be at least 3 characters long.</p>
+    <label for='option1'>Option 1:</label><input type="text" id='option1' ng-model='newPoll.option1'>
+    <p ng-show='error.option2'>Options must be at least 3 characters long.</p>
+    <label for='option2'>Option 2:</label><input type="text" id='option2' ng-model='newPoll.option2'>
+    <p ng-show='error.option3'>Options must be at least 3 characters long.</p>
+    <label for='option3'>Option 3:</label><input type="text" id='option3' ng-model='newPoll.option3'>
+    <p ng-show='error.option4'>Options must be at least 3 characters long.</p>
+    <label for='option4'>Option 4:</label><input type="text" id='option4' ng-model='newPoll.option4'>
+    <input type="submit" value="Create Poll">
+</form>
