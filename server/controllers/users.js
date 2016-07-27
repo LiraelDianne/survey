@@ -30,6 +30,7 @@ function UserController() {
             if(err) {
                 res.json({status: false, error: err})
             } else if (user) {
+                console.log('login found user', user)
                 req.session.user = user
                 res.json({status: true, user: user, session: req.session})
             } else {
@@ -42,6 +43,7 @@ function UserController() {
     }
     this.logout = function(req, res) {
         req.session.destroy()
+        console.log('session is now', req.session)
         res.json({status: true})
     }
     this.update = function(req, res) {

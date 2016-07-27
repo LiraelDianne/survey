@@ -26,4 +26,7 @@ app.controller('dashboardController', ['$scope', '$location', 'pollsFactory', 'u
             })
         })
     }
+    $scope.logout = function() {
+        usersFactory.logout()
+    }
 }])

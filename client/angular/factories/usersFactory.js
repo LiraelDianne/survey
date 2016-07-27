@@ -34,6 +34,7 @@ app.factory('usersFactory', ['$http', function($http) {
         this.login = function(user,callback){
             $http.get('/users/login/'+user.name).then(function(returned_data) {
                 if(returned_data.status) {
+                    console.log('factory login is returning', returned_data.data.user)
                     user = returned_data.data.user
                 }
                 if (typeof(callback) == 'function'){
@@ -48,9 +49,11 @@ app.factory('usersFactory', ['$http', function($http) {
         // get session information
         this.success = function(callback){
             if (user.name) {
+                console.log('factory stored user', user)
                 callback(user);
             } else {
                 $http.get('/users/session').then(function(returned_data) {
+                    console.log('session is returning', returned_data.data.user)
                     callback(returned_data.data.user)
                 })
             }
